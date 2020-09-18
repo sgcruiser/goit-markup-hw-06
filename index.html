@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+
   <body>
     <!-- Верхняя линия сайта -->
 
@@ -90,7 +91,7 @@
 
       <section class="section">
         <div class="container feature">
-          <h2 class="section-title none-display">Особенности</h2>
+          <h2 class="section-title visually-hidden">Особенности</h2>
 
           <ul class="feature-list list">
             <li class="item icon-antenna">
@@ -460,14 +461,16 @@
 
           <address class="address">
             <ul class="address-list list">
-              <li class="item">г. Киев, пр-т Леси Украинки, 26</li>
-              <li class="item">
-                <a class="link" href="mailto:info@example.com"
+              <li class="address-item item">
+                <p>г. Киев, пр-т Леси Украинки, 26</p>
+              </li>
+              <li class="address-item item">
+                <a class="address-link link" href="mailto:info@example.com"
                   >info@example.com</a
                 >
               </li>
-              <li class="item">
-                <a class="link" href="tel:+38-099-111-11-11"
+              <li class="address-item item">
+                <a class="address-link link" href="tel:+38-099-111-11-11"
                   >+38 099 111 11 11</a
                 >
               </li>
@@ -506,6 +509,16 @@
             </li>
           </ul>
         </div>
+
+        <!--  Подписка на рассылку -->
+
+        <div class="subscription">
+          <h2 class="title">Подпишитесь на рассылку</h2>
+          <form action="">
+            <input type="email" name="E-mail" id="" placeholder="E-mail" />
+            <button type="submit">Подписаться</button>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -518,6 +531,37 @@
             <use href="./images/svg/sprite.svg#btn-close"></use>
           </svg>
         </button>
+        <div class="modal-form">
+          <h1 class="title">Оставьте свои данные, мы вам перезвоним</h1>
+          <form class="form" action="">
+            <label class="form-field" for=""
+              ><span class="form-label">Имя</span></label
+            >
+            <input type="text" class="form-input" name="" id="" />
+            <label class="form-field" for=""
+              ><span class="form-label">Телефон</span></label
+            >
+            <input type="tel" class="form-input" name="" id="" />
+            <label class="form-field" for=""
+              ><span class="form-label">Почта</span></label
+            >
+            <input type="email" class="form-input" name="" id="" />
+            <label for=""><span class="form-label">Комментарий</span></label>
+            <textarea
+              class="form-texteria form-input"
+              name=""
+              id=""
+              rows="7"
+              placeholder="Введите текст"
+            ></textarea>
+            <div class="form-checkbox">
+              <input type="checkbox" name="" id="" />
+              <p>Соглашаюсь с рассылкой и принимаю</p>
+              <a href="#"><p>Условия договора</p></a>
+            </div>
+            <button type="submit" class="button">Отправить</button>
+          </form>
+        </div>
       </div>
     </div>
 
