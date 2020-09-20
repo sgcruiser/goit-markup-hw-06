@@ -513,10 +513,20 @@
         <!--  Подписка на рассылку -->
 
         <div class="subscription">
-          <h2 class="title">Подпишитесь на рассылку</h2>
-          <form action="">
-            <input type="email" name="E-mail" id="" placeholder="E-mail" />
-            <button type="submit">Подписаться</button>
+          <h2 class="subscription-title">Подпишитесь на рассылку</h2>
+          <form class="subscription-form" action="#">
+            <input
+              type="email"
+              class="subscription-form-input"
+              name="subscripe-mail"
+              placeholder="E-mail"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              autocomplete="off"
+              required
+            />
+            <button type="submit" class="subscription-form-button button">
+              Подписаться
+            </button>
           </form>
         </div>
       </div>
@@ -531,37 +541,95 @@
             <use href="./images/svg/sprite.svg#btn-close"></use>
           </svg>
         </button>
-        <div class="modal-form">
-          <h1 class="title">Оставьте свои данные, мы вам перезвоним</h1>
-          <form class="form" action="">
-            <label class="form-field" for=""
-              ><span class="form-label">Имя</span></label
+
+        <h2 class="modal-title title">
+          Оставьте свои данные, мы вам перезвоним
+        </h2>
+        <form class="form" action="#">
+          <ul class="form-list list">
+            <li class="form-item item">
+              <label class="form-field">
+                <span class="form-label">Имя</span>
+
+                <input
+                  type="text"
+                  class="form-input"
+                  name="user-name"
+                  pattern="^[A-Za-zА-Яа-яЁё\s]+$"
+                  autocomplete="off"
+                  placeholder="Имя"
+                  required
+                />
+                <svg class="form-icon">
+                  <use href="./images/svg/sprite.svg#person-black-18dp"></use>
+                </svg>
+              </label>
+            </li>
+            <li class="form-item item">
+              <label class="form-field">
+                <span class="form-label">Телефон</span>
+
+                <input
+                  type="tel"
+                  class="form-input"
+                  name="user-phone"
+                  pattern="[0-9]{10,12}"
+                  autocomplete="off"
+                  placeholder="Телефон"
+                  required
+                />
+                <svg class="form-icon">
+                  <use href="./images/svg/sprite.svg#phone-black-18dp"></use>
+                </svg>
+              </label>
+            </li>
+            <li class="form-item item">
+              <label class="form-field">
+                <span class="form-label">Почта</span>
+
+                <input
+                  type="email"
+                  class="form-input"
+                  name="user-mail"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  autocomplete="off"
+                  placeholder="Почта"
+                  required
+                />
+                <svg class="form-icon">
+                  <use href="./images/svg/sprite.svg#email-black-18dp"></use>
+                </svg>
+              </label>
+            </li>
+            <li class="form-item item">
+              <label class="textarea">
+                <span class="form-label">Комментарий</span>
+                <textarea
+                  class="form-textarea form-input"
+                  name="user-message"
+                  rows="6"
+                  placeholder="Введите текст"
+                ></textarea>
+              </label>
+            </li>
+          </ul>
+          <label class="form-checkbox">
+            <input
+              type="checkbox"
+              class="form-checkbox-input visually-hidden"
+              name="checkbox"
+              required
+            />
+            <span class="checkbox-icon"></span>
+            <span class="form-checkbox-text"
+              >Соглашаюсь с рассылкой и принимаю</span
             >
-            <input type="text" class="form-input" name="" id="" />
-            <label class="form-field" for=""
-              ><span class="form-label">Телефон</span></label
-            >
-            <input type="tel" class="form-input" name="" id="" />
-            <label class="form-field" for=""
-              ><span class="form-label">Почта</span></label
-            >
-            <input type="email" class="form-input" name="" id="" />
-            <label for=""><span class="form-label">Комментарий</span></label>
-            <textarea
-              class="form-texteria form-input"
-              name=""
-              id=""
-              rows="7"
-              placeholder="Введите текст"
-            ></textarea>
-            <div class="form-checkbox">
-              <input type="checkbox" name="" id="" />
-              <p>Соглашаюсь с рассылкой и принимаю</p>
-              <a href="#"><p>Условия договора</p></a>
-            </div>
-            <button type="submit" class="button">Отправить</button>
-          </form>
-        </div>
+            <a class="form-checkbox-link link" href="#">Условия договора</a>
+          </label>
+          <button type="submit" class="modal-form-button button">
+            Отправить
+          </button>
+        </form>
       </div>
     </div>
 
