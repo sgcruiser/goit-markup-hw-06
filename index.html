@@ -546,73 +546,64 @@
           Оставьте свои данные, мы вам перезвоним
         </h2>
         <form class="form" action="#">
-          <ul class="form-list list">
-            <li class="form-item item">
-              <label class="form-field">
-                <span class="form-label">Имя</span>
+          <label class="form-field">
+            <span class="form-label">Имя</span>
+            <input
+              type="text"
+              class="form-input"
+              name="user-name"
+              pattern="^[A-Za-zА-Яа-яЁё\s]+$"
+              autocomplete="off"
+              placeholder="Имя"
+              required
+            />
+            <svg class="form-icon">
+              <use href="./images/svg/sprite.svg#person-black-18dp"></use>
+            </svg>
+          </label>
 
-                <input
-                  type="text"
-                  class="form-input"
-                  name="user-name"
-                  pattern="^[A-Za-zА-Яа-яЁё\s]+$"
-                  autocomplete="off"
-                  placeholder="Имя"
-                  required
-                />
-                <svg class="form-icon">
-                  <use href="./images/svg/sprite.svg#person-black-18dp"></use>
-                </svg>
-              </label>
-            </li>
-            <li class="form-item item">
-              <label class="form-field">
-                <span class="form-label">Телефон</span>
+          <label class="form-field">
+            <span class="form-label">Телефон</span>
+            <input
+              type="tel"
+              class="form-input"
+              name="user-phone"
+              pattern="[0-9]{10,12}"
+              autocomplete="off"
+              placeholder="Телефон"
+              required
+            />
+            <svg class="form-icon">
+              <use href="./images/svg/sprite.svg#phone-black-18dp"></use>
+            </svg>
+          </label>
 
-                <input
-                  type="tel"
-                  class="form-input"
-                  name="user-phone"
-                  pattern="[0-9]{10,12}"
-                  autocomplete="off"
-                  placeholder="Телефон"
-                  required
-                />
-                <svg class="form-icon">
-                  <use href="./images/svg/sprite.svg#phone-black-18dp"></use>
-                </svg>
-              </label>
-            </li>
-            <li class="form-item item">
-              <label class="form-field">
-                <span class="form-label">Почта</span>
+          <label class="form-field">
+            <span class="form-label">Почта</span>
+            <input
+              type="email"
+              class="form-input"
+              name="user-mail"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              autocomplete="off"
+              placeholder="Почта"
+              required
+            />
+            <svg class="form-icon">
+              <use href="./images/svg/sprite.svg#email-black-18dp"></use>
+            </svg>
+          </label>
 
-                <input
-                  type="email"
-                  class="form-input"
-                  name="user-mail"
-                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                  autocomplete="off"
-                  placeholder="Почта"
-                  required
-                />
-                <svg class="form-icon">
-                  <use href="./images/svg/sprite.svg#email-black-18dp"></use>
-                </svg>
-              </label>
-            </li>
-            <li class="form-item item">
-              <label class="textarea">
-                <span class="form-label">Комментарий</span>
-                <textarea
-                  class="form-textarea form-input"
-                  name="user-message"
-                  rows="6"
-                  placeholder="Введите текст"
-                ></textarea>
-              </label>
-            </li>
-          </ul>
+          <label class="form-field">
+            <span class="form-label">Комментарий</span>
+            <textarea
+              class="form-textarea form-input"
+              name="user-message"
+              rows="6"
+              placeholder="Введите текст"
+            ></textarea>
+          </label>
+
           <label class="form-checkbox">
             <input
               type="checkbox"
@@ -626,6 +617,7 @@
             >
             <a class="form-checkbox-link link" href="#">Условия договора</a>
           </label>
+
           <button type="submit" class="modal-form-button button">
             Отправить
           </button>
