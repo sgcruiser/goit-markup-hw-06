@@ -488,12 +488,12 @@ body {
   align-items: center;
   width: 44px;
   height: 44px;
-  fill: currentColor;
+  fill: var(--primary-text-color);
   border-radius: 50%;
 
   color: var(--primary-text-color);
 
-  transition-property: background-color, fill;
+  transition-property: background-color, fill, color;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
 }
@@ -502,6 +502,7 @@ body {
 .team-social-link:focus {
   background-color: var(--accent-color);
   color: var(--primary-color);
+  fill: var(--primary-color);
 }
 
 .team-instagram,
@@ -1010,6 +1011,10 @@ body {
   left: 50%;
   top: 50%;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   width: 528px;
   height: 581px;
 
@@ -1045,6 +1050,8 @@ body {
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
+
+  cursor: pointer;
 }
 
 .button-close:hover {
@@ -1081,13 +1088,13 @@ body {
   width: 100%;
 }
 
-.form-item + .form-item {
-  margin-top: 10px;
-}
-
 .form-field {
   position: relative;
   display: block;
+}
+
+.form-field + .form-field {
+  margin-top: 10px;
 }
 
 .form-label {
